@@ -22,6 +22,7 @@ App web ligera y rápida para consultar el clima. Desarrollada con React, TypeSc
 ## Requisitos
 
 - Node.js v16 o superior instalado
+- POSEER UNA API KEY PARA https://api.openweathermap.org
 
 
 ## Pasos para la ejecución
@@ -29,7 +30,10 @@ App web ligera y rápida para consultar el clima. Desarrollada con React, TypeSc
 ### 1. Clona el proyecto y entra a la carpeta raíz
 
 
-### 2. Instala las dependencias y ejecuta el proyecto
+### 2. Crea un archivo .env con la siguiente clave (necesario para que la api funcione): 
+VITE_WEATHER_API_KEY=tu_api_key **(recuerda reemplazarla por la api key que obtuviste en la web)**
+
+### 3. Instala las dependencias y ejecuta el proyecto
 
 Ejecuta este comando en la raíz del proyecto para instalar todas las dependencias y levantar el servidor y el cliente:
 

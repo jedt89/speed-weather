@@ -17,24 +17,33 @@ import {
   WiThunderstorm
 } from 'react-icons/wi';
 
-import { chile, continentalCities } from '../constants/cities'; 
+import { chile, continentalCities } from '../constants/cities';
 
 const HomeView = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
-  const [filteredCities, setFilteredCities] = useState<Record<string, string[]>>({});
-  const { weatherData, loading, error, getWeather, getWeatherByCoords } = useWeather();
+  const [filteredCities, setFilteredCities] = useState<
+    Record<string, string[]>
+  >({});
+  const { weatherData, loading, error, getWeather, getWeatherByCoords } =
+    useWeather();
   const { location, error: geoError } = useGeolocation();
 
   const getWeatherIcon = (weatherType: string) => {
     const size = 24;
     switch (weatherType.toLowerCase()) {
-      case 'clear': return <WiDaySunny size={size} />;
-      case 'rain': return <WiRain size={size} />;
-      case 'snow': return <WiSnow size={size} />;
-      case 'thunderstorm': return <WiThunderstorm size={size} />;
-      case 'clouds': return <WiCloudy size={size} />;
-      default: return <WiDaySunny size={size} />;
+      case 'clear':
+        return <WiDaySunny size={size} />;
+      case 'rain':
+        return <WiRain size={size} />;
+      case 'snow':
+        return <WiSnow size={size} />;
+      case 'thunderstorm':
+        return <WiThunderstorm size={size} />;
+      case 'clouds':
+        return <WiCloudy size={size} />;
+      default:
+        return <WiDaySunny size={size} />;
     }
   };
 
@@ -46,11 +55,11 @@ const HomeView = () => {
 
   useEffect(() => {
     const allCities: Record<string, string[]> = {
-      'Chile': chile,
-      'América': continentalCities.america,
-      'Europa': continentalCities.europe,
-      'Asia': continentalCities.asia,
-      'África y Oceanía': continentalCities.africa_oceania,
+      Chile: chile,
+      América: continentalCities.america,
+      Europa: continentalCities.europe,
+      Asia: continentalCities.asia,
+      'África y Oceanía': continentalCities.africa_oceania
     };
 
     if (searchQuery.trim() === '') {
@@ -88,10 +97,10 @@ const HomeView = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
       >
         <SearchInputContainer>
-          <FiSearch color="#666" />
+          <FiSearch color='#666' />
           <SearchInput
-            type="text"
-            placeholder="Buscar ciudad..."
+            type='text'
+            placeholder='Buscar ciudad...'
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

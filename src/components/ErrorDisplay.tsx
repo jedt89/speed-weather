@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import { FiAlertCircle } from 'react-icons/fi'
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { FiAlertCircle } from 'react-icons/fi';
 
 interface ErrorDisplayProps {
-  message: string
-  onRetry?: () => void
+  message: string;
+  onRetry?: () => void;
 }
 
 const ErrorDisplay = ({ message, onRetry }: ErrorDisplayProps) => {
@@ -19,7 +19,7 @@ const ErrorDisplay = ({ message, onRetry }: ErrorDisplayProps) => {
       </ErrorIcon>
       <ErrorMessage>{message}</ErrorMessage>
       {onRetry && (
-        <RetryButton 
+        <RetryButton
           onClick={onRetry}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -28,8 +28,8 @@ const ErrorDisplay = ({ message, onRetry }: ErrorDisplayProps) => {
         </RetryButton>
       )}
     </ErrorContainer>
-  )
-}
+  );
+};
 
 const ErrorContainer = styled(motion.div)`
   display: flex;
@@ -45,18 +45,18 @@ const ErrorContainer = styled(motion.div)`
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-`
+`;
 
 const ErrorIcon = styled.div`
   color: #f44336;
   margin-bottom: 1rem;
-`
+`;
 
 const ErrorMessage = styled.p`
   color: ${({ theme }) => theme.colors.text};
   margin: 0 0 1rem;
   font-size: 1rem;
-`
+`;
 
 const RetryButton = styled(motion.button)`
   padding: 0.5rem 1.5rem;
@@ -67,6 +67,6 @@ const RetryButton = styled(motion.button)`
   cursor: pointer;
   font-weight: 500;
   font-size: 0.9rem;
-`
+`;
 
-export default ErrorDisplay
+export default ErrorDisplay;

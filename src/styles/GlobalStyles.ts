@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -40,6 +40,6 @@ const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background: ${({ theme }) => theme.colors.secondary};
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;
