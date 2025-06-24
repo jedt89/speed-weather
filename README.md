@@ -23,12 +23,10 @@ App web ligera y rápida para consultar el clima. Desarrollada con React, TypeSc
 
 - Node.js v16 o superior instalado
 
----
 
 ## Pasos para la ejecución
 
 ### 1. Clona el proyecto y entra a la carpeta raíz
----
 
 
 ### 2. Instala las dependencias y ejecuta el proyecto
