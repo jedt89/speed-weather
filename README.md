@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# 🌤️ Speed Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+App web ligera y rápida para consultar el clima. Desarrollada con React, TypeScript y Vite, ofrece una interfaz moderna, experiencia fluida y buenas prácticas de desarrollo.
 
-Currently, two official plugins are available:
+# Tecnologías utilizadas 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 React: Librería de construcción para interfaces de usuario.
 
-## Expanding the ESLint configuration
+🚀 Typescript: Lenguaje tipado de programación web.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🚀 Vite: Motor de creación de aplicaciones.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+🚀 Axios: Librería de gestión para peticiones HTTP.
+
+🚀 Framer Motion: Librería de animaciones para react, incluídas con Next UI.
+
+🚀 React-icons: Librería de iconos para react.
+
+
+# Cómo ejecutar el proyecto Speed Weather
+
+## Requisitos
+
+- Node.js v16 o superior instalado
+
+---
+
+## Pasos para la ejecución
+
+### 1. Clona el proyecto y entra a la carpeta raíz
+---
+
+
+### 2. Instala las dependencias y ejecuta el proyecto
+
+Ejecuta este comando en la raíz del proyecto para instalar todas las dependencias y levantar el servidor y el cliente:
+
+```bash
+npm install && npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+✅ ¡Listo! El proyecto ya está disponible en el navegador.
